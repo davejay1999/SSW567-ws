@@ -30,17 +30,21 @@ def classifyTriangle(a,b,c):
         return 'NotATriangle'
 
     if (a + b > c) and (b + c > a) and (c + a > b):
-       
+    #   If two sides summation is greater than third side, then it's a triangle.
         if ((a*a + b*b) == c*c) or ((b*b + c*c) == a*a) or ((c*c + a*a) == b*b): 
+            # for right angle triangle, it must satify side_1*side_1 + side_2*side_2 = side_3*side_3
             return 'Right'
         
         elif a == b and b == c:
+            # for  Equilateral triangle, it must satify side_1 = side_2 = side_3.
             return 'Equilateral'
         
         elif (a == b and b != c) or (a == c and a != b) or (b == c and c != a):
+            # for Isoceles triangle, exactly two sides must be same.
             return 'Isoceles'
         
         elif (a != b and b != c):
+            # for scalene triangle, all three sides must be of different length.
             return 'Scalene'
         
         else:
