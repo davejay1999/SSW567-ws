@@ -3,13 +3,13 @@
 Updated Jan 21, 2018
 The primary goal of this file is to demonstrate a simple unittest implementation
 
-@author: jrr
-@author: rk
+@author: author1
+@author: JayDave
 """
 
 import unittest
 
-from Triangle import classifyTriangle
+from ClassifyTriangle import classifyTriangle
 
 # This code implements the unit test functionality
 # https://docs.python.org/3/library/unittest.html has a nice description of the framework
@@ -55,5 +55,4 @@ class TestTriangles(unittest.TestCase):
 if __name__ == '__main__':
     print('Running unit tests')
     unittest.main()
-
 

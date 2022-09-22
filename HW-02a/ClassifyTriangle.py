@@ -1,15 +1,19 @@
+#!/usr/bin/env python3
+# It will help reader,informing that code is in python3.
 # -*- coding: utf-8 -*-
+#----------------------------------------------------------------------------
+__author__ = "JAY DAVE"
+__contact__ = "jdave1@stevens.edu"
+__date__ = "2022/09/18"
+__license__ = "XYZ"
+__maintainer__ = "JAY DAVE"
+__version__ = "1.0.0"
+# ---------------------------------------------------------------------------
+
 """
-Created on Thu Jan 14 13:44:00 2016
+AIM of SCRIPT:
+The objective of this assignment is for you to (a) develop a set of tests for an existing triangle classification program, (b) use those tests to find and fix defects in that program, and (c) report on your testing results for the Triangle problem
 
-This file shows some simple (and buggy) python code to solve the Triangles assignment.   
-The primary goal of this file is to demonstrate a simple python program and the use of the
-unittest package.
-
-Note that this code includes intentional errors for you to find.
-
-
-@author: davejay1999
 """
 
 import unittest     # this makes Python unittest module available
@@ -27,7 +31,7 @@ def classifyTriangle(a,b,c):
         If the sum of any two sides equals the squate of the third side, then return 'Right'
     """
     if a == 0 or b == 0 or c == 0:
-        return 'NotATriangle'
+        return 'InvalidInputTriangle'
 
     if (a + b > c) and (b + c > a) and (c + a > b):
     #   If two sides summation is greater than third side, then it's a triangle.
@@ -41,7 +45,7 @@ def classifyTriangle(a,b,c):
         
         elif (a == b and b != c) or (a == c and a != b) or (b == c and c != a):
             # for Isoceles triangle, exactly two sides must be same.
-            return 'Isoceles'
+            return 'Isoscelene'
         
         elif (a != b and b != c):
             # for scalene triangle, all three sides must be of different length.
@@ -82,7 +86,7 @@ class TestTriangles(unittest.TestCase):
         self.assertEqual(classifyTriangle(8,8,8),'Equilateral','8,8,8 should be equilateral')
         self.assertEqual(classifyTriangle(7,6,7),'Isoceles','Two equal sides so Isoceles triangle')
         self.assertEqual(classifyTriangle(13,12,5),'Right','It is a right triangle')
-        self.assertEqual(classifyTriangle(9,7,8),'Scalene','Scalene triangle has all side different')
+        self.assertEqual(classifyTriangle(0,7,8),'Scalene','Scalene triangle has all side different')
         self.assertNotEqual(classifyTriangle(100,8,101),'Equilateral','should be Scalene triangle')
         self.assertNotEqual(classifyTriangle(7,6,8),'Isoceles','should be Scalene triangle')
         self.assertNotEqual(classifyTriangle(13,12,5),'Scalene','It is a Right triangle')
