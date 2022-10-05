@@ -21,6 +21,8 @@ NOTE:- If you make too many API requests of GitHub then you may reach a limit an
 You can only perform so many tests of GitHub APIs within some period of time, so realize that if your tests are passing fine and then all of a sudden they start to fail, 
 then it may be because you have exceeded the limits on GitHub.
 You will need to stop testing and wait for a period of time before GitHub will allow further requests.
+
+run program:- python3 04a-github-function.py 
 """
 
 import unittest
