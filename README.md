@@ -1,4 +1,4 @@
-# NOTE:- HW05a is in HW 04 folder.
+# NOTE:- HW05a is in HW-04a folder. filename are "TestingGithubUsingMock" and "githubfunction".
 # MOCKING GITHUB API CIRCLE CI BADGE
 
 
