@@ -13,7 +13,7 @@ jobs:
           command: |
             pip install pytest
             pip install requests
-            pytest --junitxml=test-results/junit.xml HW-04a/04a-github-function.py
+            pytest --junitxml=test-results/junit.xml HW-04a/githubfunction.py
             pytest --junitxml=test-results/junit.xml HW-02a/TestTriangle.py
             pytest --junitxml=test-results/junit.xml HW-04a/TestingGithubUsingMock.py
       - store_test_results:
