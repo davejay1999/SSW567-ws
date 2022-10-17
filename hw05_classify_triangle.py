@@ -50,17 +50,9 @@ def classify_triangle(a,b,c):
         if (a != b and b != c):
             # for scalene triangle, all three sides must be of different length.
             return 'Scalene'
-
-        return 'NotATriangle'
-
     else:
         return 'NotATriangle'
 
-
-
-def runClassifyTriangle(a, b, c):
-    """ invoke classify_triangle with the specified arguments and print the result """
-    print('classify_triangle(',a, ',', b, ',', c, ')=',classify_triangle(a,b,c),sep="")
 
 
 # The remainder of this code implements the unit test functionality
