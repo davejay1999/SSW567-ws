@@ -52,7 +52,5 @@ class TestTriangles(unittest.TestCase):
 
     def testInvalidInputTriangleC(self): 
         self.assertEqual(classify_triangle(0,0,0),'InvalidInputTriangle','0,0,0 should be InvalidInputTriangle')
-if __name__ == '__main__':
-    print('Running unit tests')
-    unittest.main()
+
 
